@@ -5,20 +5,20 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 function Login() {
-  const ROUTE = [
-    {
-      name: "Login",
-      path: "/login",
-    },
-    {
-      name: "Signin",
-      path: "/signin",
-    },
-    {
-      name:"forgotPass",
-      path:"/forgotPass"
-    }
-  ];
+  // const ROUTE = [
+  //   {
+  //     name: "Login",
+  //     path: "/login",
+  //   },
+  //   {
+  //     name: "Signin",
+  //     path: "/signin",
+  //   },
+  //   {
+  //     name:"forgotPass",
+  //     path:"/forgotPass"
+  //   }
+  // ];
 
   return (
     <section className="relative w-screen h-screen ">
