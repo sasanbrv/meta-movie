@@ -17,9 +17,9 @@ const Navbar = () => {
     ]
      return (
       <>
-         <div className="flex justify-between md:justify-start px-5 bg-gray-400 items-center h-20 shadow-md relative z-50">
+         <div className="flex justify-between md:justify-start px-5 bg-transparent items-center h-20 relative z-50">
             <div className="flex items-center md:px-4">
-               <Link className="whitespace-nowrap font-bold text-xl md:text-3xl text-white">
+               <Link className="whitespace-nowrap font-bold text-xl md:text-3xl text-black">
                     Meta Movie
                </Link>
             </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
                      key={item.path}
                      to={item.path}
                      className={({ isActive }) =>
-                        `text-white hover:text-yellow-300 transition-colors ${
+                        `text-black hover:text-yellow-300 transition-colors ${
                            isActive ? 'text-yellow-300 font-bold' : ''
                         }`
                      }
@@ -38,7 +38,7 @@ const Navbar = () => {
                      {item.lable}
                   </NavLink>
                ))}
-               <FaSearch className="font-light cursor-pointer text-white hover:text-yellow-300 transition-colors text-2xl" />
+               <FaSearch className="font-light cursor-pointer text-black hover:text-yellow-300 transition-colors text-2xl" />
             </div>
 
             <button
