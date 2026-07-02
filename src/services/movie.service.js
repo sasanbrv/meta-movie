@@ -1,16 +1,16 @@
 import api from "./api";
-
+const today = new Date().toISOString().split("T")[0]
 export const movieService = {
     getTrending: async () => {
-        const { data } = await api.get("/trending/movie/day");
+        const { data } = await api.get("/trending/movie/week");
         return data.results
     },
     getPopular: async () => {
         const { data } = await api.get("/movie/popular");
         return data.results
     },
-    getTopRated: async () => {
-        const { data } = await api.get("/movie/top_movie");
+    getTvPopular: async () => {
+        const { data } = await api.get("/tv/popular");
         return data.results
     },
     getUpcoming: async () => {
@@ -19,6 +19,16 @@ export const movieService = {
     },
     getNowPlaying: async () => {
         const { data } = await api.get("/movie/now_playing");
+        return data.results
+    },
+
+    getLatestReleased: async () => {
+        const { data } = await api.get("discover/movie" , {
+            params:{
+                sort_by: "primary_release_date.desc",
+                "primary_release_date.lte": today
+            }
+        });
         return data.results
     },
     

@@ -17,7 +17,7 @@ const Navbar = () => {
     ]
      return (
       <>
-         <div className="flex justify-between md:justify-start px-5 bg-transparent items-center h-20 relative z-50">
+         <div className="flex justify-between md:justify-start px-5 bg-transparent items-center h-20 fixed inset-x-0 top-0 lef-0 z-50">
             <div className="flex items-center md:px-4">
                <Link className="whitespace-nowrap font-bold text-xl md:text-3xl text-black">
                     Meta Movie
@@ -43,7 +43,7 @@ const Navbar = () => {
 
             <button
                onClick={() => setIsOpen(true)}
-               className="md:hidden text-white text-3xl"
+               className="md:hidden text-black text-3xl"
             >
                <HiMenu />
             </button>
