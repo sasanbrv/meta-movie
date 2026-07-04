@@ -6,6 +6,7 @@ import HomePage from "../pages/Home/HomePage";
 import Login from './../pages/Login/loginpage/Login';
 import Signup from './../pages/Signup/Signup';
 import ForgotPass from "./../pages/Login/forgotpass/ForgotPass"
+import UpComing from "../pages/upComing/UpComing";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/upcoming",
+        element: <UpComing />,
       },
     ],
   },

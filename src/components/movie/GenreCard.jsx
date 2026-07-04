@@ -2,7 +2,7 @@ const GenreCard = ({bgImg , title } ) => {
     return ( 
 
         <>
-        <div className="relative aspect-video w-full cursor-pointer overflow-hidden rounded-2xl" style={{
+        <div className=" relative aspect-video w-full cursor-pointer overflow-hidden rounded-2xl" style={{
             backgroundImage: `url(${bgImg})`, backgroundSize:"cover" , backgroundPosition:"center"
         }}>
             <div className="absolute bg-black/50 inset-0 flex items-center justify-center ">

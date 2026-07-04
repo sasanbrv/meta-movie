@@ -7,7 +7,7 @@ function MainHero() {
       <img
         src={HeroMain}
         alt="Hero Banner"
-        className="absolute inset-0 h-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Overlay */}

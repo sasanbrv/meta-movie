@@ -9,7 +9,7 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home" },
+    { path: "/", label: "Home", end: true },
     { path: "/upcoming", label: "Upcoming" },
     { path: "/shows", label: "Shows" },
     { path: "/plans", label: "Plans" },
@@ -39,8 +39,8 @@ function Navbar() {
   <div className="container mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
     <Link to="/" className="shrink-0">
-      <h1 className="text-2xl sm:text-3xl font-bold text-white whitespace-nowrap">
-        <span className="text-primary">M</span>eta Movie
+      <h1 className="text-2xl sm:text-3xl text-white whitespace-nowrap">
+        <span className="text-primary text-3xl font-bold">M</span>eta Movie
       </h1>
     </Link>
 
@@ -50,9 +50,10 @@ function Navbar() {
         <NavLink
           key={item.path}
           to={item.path}
+          end={item.end}
           className={({ isActive }) =>
-            `text-base md:text-lg text-white transition ${
-              isActive ? "text-primary" : "hover:text-primary"
+            `text-base md:text-lg  transition ${
+              isActive ? "text-primary font-bold" : " text-white  hover:text-primary"
             }`
           }
         >
@@ -100,8 +101,11 @@ function Navbar() {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="text-white text-xl hover:text-primary"
-              >
+                className={({ isActive }) =>
+                  `text-xl transition ${
+                    isActive
+                      ? "text-primary font-semibold"
+                      : "text-white hover:text-primary"}`}>
                 {item.label}
               </NavLink>
             ))}

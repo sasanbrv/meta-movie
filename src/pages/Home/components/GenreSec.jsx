@@ -87,13 +87,25 @@ const GenreSec = () => {
 
   return (
     <section className="my-10 ml-10">
-
+        <h1 className="text-2xl font-bold mb-8 text-white">
+          Explore Genre
+        </h1>
+       
       <Swiper
-        spaceBetween={30}
-        slidesPerView={6}
+        breakpoints={{
+        0 : {
+          spaceBetween:20,
+        slidesPerView: 2},
+        768: {
+          spaceBetween:20,
+          slidesPerView:4},
+        1024: {
+          spaceBetween:20,
+          slidesPerView:6},
+        }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-        }}
+        }} 
       >
         {genres.map((genre) => (
           <SwiperSlide key={genre.id}>

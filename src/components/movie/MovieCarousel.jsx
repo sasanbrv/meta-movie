@@ -23,14 +23,23 @@ const MovieCarousel = ({ title, fetchMovies }) => {
   return (
     <section className="my-10 ml-10">
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-black">
+        <h2 className="text-2xl font-bold text-white">
           {title}
         </h2>
       </div>
 
       <Swiper
-        spaceBetween={20}
-        slidesPerView={7}
+      breakpoints={{
+        0 : {
+          spaceBetween:100,
+        slidesPerView: 2},
+        768: {
+          spaceBetween:30,
+          slidesPerView:4},
+        1024: {
+          spaceBetween:20,
+          slidesPerView:6},
+        }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}

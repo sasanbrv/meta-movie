@@ -6,7 +6,11 @@ export const movieService = {
         return data.results
     },
     getPopular: async () => {
-        const { data } = await api.get("/movie/popular");
+        const { data } = await api.get("/movie/popular", {
+            params: {
+                page: 3,
+            }
+        });
         return data.results
     },
     getTvPopular: async () => {

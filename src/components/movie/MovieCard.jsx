@@ -6,7 +6,7 @@ const MovieCard = ({movie,onClick}) => {
     return ( 
         <>
         <div onClick={onClick}
-            className="w-40 overflow-hidden cursor-pointer transition-all duration-200 hover:scale-105">
+            className=" w-40 overflow-hidden cursor-pointer transition-all duration-200 hover:scale-105">
             <img alt={movie.title} src={imageUrl} className="rounded-tr-2xl rounded-bl-2xl  h-52 w-full object-cover"/>
             <div className="p-4">
                 <h3 className="text-white truncate text-lg font-semibold">{movie.title || movie.name}</h3>
