@@ -12,14 +12,6 @@
   --color-violet: #A473FF;
 }
 
-
-
-
-
-
-
-
-
 @font-face {
   font-family: "poppins";
   src: url("assets/Fonts/Poppins-Bold.woff2") format("woff2");
@@ -38,4 +30,24 @@
   src: url("assets/Fonts/Poppins-SemiBold.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
+}
+.hero-swiper {
+  --swiper-pagination-color: #7300ff;
+  --swiper-pagination-bullet-inactive-color: rgba(255,255,255,.4);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+.hero-swiper .swiper-pagination {
+  bottom: 40px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 40px !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+  margin: 0 6px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 70px !important;
 }

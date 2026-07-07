@@ -30,19 +30,19 @@ function ForgetPassword() {
     }));
   };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const result = ForgotPassSchema.safeParse(formData);
+    const result = ForgotPassSchema.safeParse(formData);
 
-  if (!result.success) {
-    setErrors(result.error.flatten().fieldErrors);
-    return;
-  }
+    if (!result.success) {
+      setErrors(result.error.flatten().fieldErrors);
+      return;
+    }
 
-  setErrors({});
-  console.log(result.data);
-};
+    setErrors({});
+    console.log(result.data);
+  };
   return (
     <section className="relative h-screen w-screen overflow-hidden">
       {/* Background */}
@@ -85,24 +85,24 @@ const handleSubmit = (e) => {
             </div>
 
             <div className="mt-8 space-y-5">
-{inputs.map(({ name, type, placeholder }) => (
-  <div key={name}>
-    <input
-      name={name}
-      type={type}
-      placeholder={placeholder}
-      value={formData[name]}
-      onChange={handleChange}
-      className="w-full rounded-lg border border-white/20 bg-white/10 px-5 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-primary"
-    />
+              {inputs.map(({ name, type, placeholder }) => (
+                <div key={name}>
+                  <input
+                    name={name}
+                    type={type}
+                    placeholder={placeholder}
+                    value={formData[name]}
+                    onChange={handleChange}
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-5 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-primary"
+                  />
 
-    {errors[name] && (
-      <p className="mt-1 text-sm text-red-400 text-center">
-        {errors[name][0]}
-      </p>
-    )}
-  </div>
-))}
+                  {errors[name] && (
+                    <p className="mt-1 text-sm text-red-400 text-center">
+                      {errors[name][0]}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
 
             <button
