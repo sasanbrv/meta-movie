@@ -5,9 +5,6 @@ import "swiper/css/navigation"
 import "../MoviePlayer.css"
 const MovieInfo = ({movie}) => {
 
-    const truncate = (text , maxLength) => {
-        text.length > maxLength ? text.slice(0 , maxLength) + "..." : text ;
-    }
     return ( 
         <>
         <section>
@@ -53,8 +50,8 @@ const MovieInfo = ({movie}) => {
                                   {actor.name}
                                 </h1>
                         
-                                <h2 className="whitespace-nowrap text-sm text-gray-400">
-                                  {truncate(actor.character, 25)}
+                                <h2 className=" text-sm text-gray-400">
+                                  {actor.character}
                                 </h2>
                               </div>
                             </div>
