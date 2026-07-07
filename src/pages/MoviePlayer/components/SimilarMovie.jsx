@@ -1,4 +1,4 @@
- const SimilarMovie = ({movie}) => {
+ const SimilarMovie = () => {
     return ( 
         <>
         </>
