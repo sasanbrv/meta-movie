@@ -35,5 +35,10 @@ export const movieService = {
         });
         return data.results
     },
+
+    getMovie: async () => {
+        const { data } = await api.get("/movie/550?append_to_response=credits,videos,recommendations" );
+        return data
+    },
     
 }

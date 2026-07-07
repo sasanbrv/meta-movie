@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-
 import "swiper/css";
 
 import MovieCard from "./MovieCard";

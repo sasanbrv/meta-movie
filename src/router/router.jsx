@@ -7,6 +7,7 @@ import Login from './../pages/Login/loginpage/Login';
 import Signup from './../pages/Signup/Signup';
 import ForgotPass from "./../pages/Login/forgotpass/ForgotPass"
 import UpComing from "../pages/upComing/UpComing";
+import MoviePlayer from "../pages/MoviePlayer/MoviePlayer";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/upcoming",
         element: <UpComing />,
+      },
+      {
+        path: "/movie",
+        element: <MoviePlayer />,
       },
     ],
   },
