@@ -5,7 +5,7 @@ const Footer = () => {
     return ( 
         <footer className="mt-auto w-full">  {/* ← این خط رو اضافه کنید */}
             <div 
-                className="bg-cover bg-[position:0%_15%] relative w-full"
+                className="bg-cover bg-position-[0%_15%] relative w-full"
                 style={{backgroundImage: `url(${bgImg})`}}
             >
                 <div className="flex py-20 bg-purple-900/50 justify-center items-center">
