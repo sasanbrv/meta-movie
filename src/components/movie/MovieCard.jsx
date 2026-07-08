@@ -1,11 +1,17 @@
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({movie,onClick}) => {
+const MovieCard = ({movie}) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/movie/${movie.id}`); 
+    }
 
     const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
     return ( 
         <>
-        <div onClick={onClick}
+        <div onClick={handleClick}
             className=" w-40 overflow-hidden cursor-pointer transition-all duration-200 hover:scale-105">
             <img alt={movie.title} src={imageUrl} className="rounded-tr-2xl rounded-bl-2xl  h-52 w-full object-cover"/>
             <div className="p-4">

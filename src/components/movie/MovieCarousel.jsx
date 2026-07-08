@@ -13,6 +13,7 @@ const MovieCarousel = ({ title, fetchMovies }) => {
   useEffect(() => {
     const loadMovies = async () => {
       const data = await fetchMovies();
+      console.log(data)
       setMovies(data);
     };
 

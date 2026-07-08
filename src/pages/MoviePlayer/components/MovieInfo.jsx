@@ -7,7 +7,7 @@ const MovieInfo = ({movie}) => {
 
     return ( 
         <>
-        <section>
+        <section className="min-h-125">
             <div className="text-white  pl-10">
                 <div className="">
                     <h1 className="text-2xl py-4">Synopsis</h1>
