@@ -1,8 +1,6 @@
 import {
   FaPlay,
   FaShareAlt,
-  FaHeart,
-  FaDownload,
   FaStar,
 } from "react-icons/fa";
 
