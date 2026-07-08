@@ -2,7 +2,7 @@
 import { useEffect , useState } from 'react';
 import { movieService } from './../../services/movie.service';
 import MovieInfo from './components/MovieInfo';
-
+import HeroMovie from './components/HeroMovie'
 const MoviePlayer = () => {
     const [movie,setMovie] = useState(null)
 
@@ -24,6 +24,7 @@ const MoviePlayer = () => {
     return ( 
 
         <>
+        <HeroMovie movie ={movie}/>
         <MovieInfo movie={movie} />
         </>
      );

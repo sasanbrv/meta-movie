@@ -37,7 +37,7 @@ const FAQ = () => {
             </button>
 
             {openId === faq.id && (
-              <p className="mt-4 wrap-break-word text-gray-300">
+              <p className="mt-4 wrap-break-word text-gray-300 ">
                 {faq.answer}
               </p>
             )}
