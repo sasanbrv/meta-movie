@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
         element: <UpComing />,
       },
       {
-        path: "/movie",
+        path: "movie/:id",
         element: <MoviePlayer />,
       },
     ],

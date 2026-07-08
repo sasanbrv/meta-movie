@@ -11,16 +11,8 @@ const HomePage = () => {
   return (
     <>
 
-        <MainHero/>
-    <MovieCarousel fetchMovies={movieService.getPopular} title={'Popular'} />
-    <MovieCarousel fetchMovies={movieService.getNowPlaying} title={'Latest Released'} /> 
-    <MovieCarousel fetchMovies={movieService.getTrending} title={'Trending movies & shows'} />
-    <MovieCarousel fetchMovies={movieService.getTvPopular} title={'Popular Tv Shows'} />
-    <MovieCarousel fetchMovies={movieService.getUpcoming} title={'Upcoming'} />
-    <GenreSec />
-    <FAQ />
       <div className="bg-black">
-        <MainHero />
+        <MainHero/>
         <MovieCarousel
           fetchMovies={movieService.getUpcoming}
           title={"Popular"}
@@ -29,11 +21,11 @@ const HomePage = () => {
           fetchMovies={movieService.getNowPlaying}
           title={"Latest Released"}
         />
-        <MostWatched/>
         <MovieCarousel
           fetchMovies={movieService.getTrending}
           title={"Trending movies & shows"}
-        />
+          />
+        <MostWatched/>
         <MovieCarousel
           fetchMovies={movieService.getTvPopular}
           title={"Popular Tv Shows"}
@@ -42,7 +34,9 @@ const HomePage = () => {
           fetchMovies={movieService.getUpcoming}
           title={"Upcoming"}
         />
+
         <GenreSec />
+        <FAQ />
       </div>
     </>
   );
