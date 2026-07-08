@@ -4,6 +4,7 @@ import MovieInfo from './components/MovieInfo';
 import SimilarMovie from './components/SimilarMovie';
 import { useParams } from 'react-router-dom';
 
+import HeroMovie from './components/HeroMovie'
 const MoviePlayer = () => {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
@@ -49,6 +50,7 @@ const MoviePlayer = () => {
     // ✅ نمایش محتوای اصلی
     return ( 
         <>
+            <HeroMovie movie ={movie}/>
             <MovieInfo movie={movie} />
             <SimilarMovie movie={movie} />
         </>

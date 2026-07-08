@@ -5,9 +5,10 @@ import "swiper/css/navigation"
 import "../MoviePlayer.css"
 const MovieInfo = ({movie}) => {
 
+
     return ( 
         <>
-        <section className="min-h-125">
+        <section className="">
             <div className="text-white  pl-10">
                 <div className="">
                     <h1 className="text-2xl py-4">Synopsis</h1>
@@ -50,7 +51,7 @@ const MovieInfo = ({movie}) => {
                                   {actor.name}
                                 </h1>
                         
-                                <h2 className=" text-sm text-gray-400">
+                                <h2 className="whitespace-nowrap text-sm text-gray-400">
                                   {actor.character}
                                 </h2>
                               </div>
