@@ -40,5 +40,16 @@ export const movieService = {
         const { data } = await api.get(`/movie/${id}?append_to_response=credits,videos,recommendations` );
         return data
     },
+
+    getGenre: async (id , page , sortBy) => {
+        const { data } = await api.get("/discover/movie", {
+            params:{
+                with_genres: id,
+                page,
+                sort_by: sortBy , 
+            }
+        } );
+        return data
+    },
     
 }

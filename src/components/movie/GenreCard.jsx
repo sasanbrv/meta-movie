@@ -1,8 +1,15 @@
-const GenreCard = ({bgImg , title } ) => {
+import { useNavigate } from "react-router-dom";
+
+const GenreCard = ({bgImg , title , id } ) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/genre/${id}`); 
+    }
     return ( 
 
         <>
-        <div className=" relative aspect-video w-full cursor-pointer overflow-hidden rounded-2xl" style={{
+        <div onClick={handleClick} className=" relative aspect-video w-full cursor-pointer overflow-hidden rounded-2xl" style={{
             backgroundImage: `url(${bgImg})`, backgroundSize:"cover" , backgroundPosition:"center"
         }}>
             <div className="absolute bg-black/50 inset-0 flex items-center justify-center ">
