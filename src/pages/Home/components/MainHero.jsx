@@ -12,9 +12,11 @@ import Interstellar from "../../../assets/img/Interstellar.jpg";
 import SchindlersList from "../../../assets/img/Schindler's List.jpg";
 import lotr from "../../../assets/img/The Lord of the Rings.jpg";
 import Godfather from "../../../assets/img/the godFather.jpg";
+import { useNavigate } from "react-router-dom";
 
 const MOVIE_DETAILS = [
   {
+    id:414906,
     img: Batman,
     date: "2022",
     name: "The Batman",
@@ -23,6 +25,7 @@ const MOVIE_DETAILS = [
       "Batman is called to intervene when the mayor of Gotham City is murdered. Soon, his investigation leads him to uncover a web of corruption, linked to his own dark past.",
   },
   {
+    id:239,
     img: Godfather,
     date: "1972",
     name: "The Godfather",
@@ -31,6 +34,7 @@ const MOVIE_DETAILS = [
       "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
   },
   {
+    id:120,
     img: lotr,
     date: "2003",
     name: "The Lord of the Rings: The Return of the King",
@@ -39,6 +43,7 @@ const MOVIE_DETAILS = [
       "Gandalf and Aragorn lead the World of Men against Sauron's army while Frodo and Sam approach Mount Doom.",
   },
   {
+    id:424,
     img: SchindlersList,
     date: "1993",
     name: "Schindler's List",
@@ -47,6 +52,7 @@ const MOVIE_DETAILS = [
       "Industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce during World War II.",
   },
   {
+    id:157336,
     img: Interstellar,
     date: "2014",
     name: "Interstellar",
@@ -57,8 +63,10 @@ const MOVIE_DETAILS = [
 ];
 
 function MainHero() {
+  const navigate = useNavigate();
+
   return (
-    <section className="relative h-screen overflow-hidden"> 
+    <section className=" relative h-screen overflow-hidden"> 
       {/* Background Image */}
     <Swiper
      className="hero-swiper"
@@ -106,14 +114,9 @@ function MainHero() {
                   </p>
 
                   <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4">
-                    <button className="flex items-center justify-center gap-2 bg-primary px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold cursor-pointer">
+                    <button onClick={() => navigate(`/movie/${movie.id}`) } className="flex items-center justify-center gap-2 bg-primary px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold cursor-pointer">
                       <FaPlay />
                       Play Now
-                    </button>
-
-                    <button className="flex items-center justify-center gap-2 bg-white/10 px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold backdrop-blur cursor-pointer">
-                      <FaPlay />
-                      Watch Trailer
                     </button>
 
                     <button className="flex items-center justify-center gap-2 bg-white/10 px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold backdrop-blur cursor-pointer">

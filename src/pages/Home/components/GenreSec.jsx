@@ -109,7 +109,7 @@ const GenreSec = () => {
       >
         {genres.map((genre) => (
           <SwiperSlide key={genre.id}>
-            <GenreCard title={genre.title} bgImg={genre.image} />
+            <GenreCard id={genre.id} title={genre.title} bgImg={genre.image} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -13,8 +13,10 @@ import superGirl from "../../../assets/img/Super girl.jpg";
 import toyStory from "../../../assets/img/toy stroy 5.jpg";
 import moneyHeist from "../../../assets/img/money heist.png";
 import odyssey from "../../../assets/img/odyssey.jpg";
+import { useNavigate } from "react-router-dom";
 const MOVIE_DETAILS = [
   {
+    id:71446,
     img: moneyHeist,
     date: "2017",
     name: "Money Heist",
@@ -23,6 +25,7 @@ const MOVIE_DETAILS = [
       "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
   },
   {
+    id:1301421,
     img: SheepDetectives,
     date: "2026",
     name: "the Sheep Detectives",
@@ -31,6 +34,7 @@ const MOVIE_DETAILS = [
       "Every night a shepherd reads aloud a murder mystery, pretending his sheep can understand. When he is found dead, the sheep realize at once that it was a murder and think they know everything about how to go about solving it.",
   },
   {
+    id:862,
     img: toyStory,
     date: "2026",
     name: "Toy Story 5",
@@ -39,6 +43,7 @@ const MOVIE_DETAILS = [
       "Woody, Buzz, Jessie and the rest of the gang's jobs are challenged when they're introduced to electronics, a new threat to playtime.",
   },
   {
+    id:62688,
     img: superGirl,
     date: "2026",
     name: "Supergirl",
@@ -47,6 +52,7 @@ const MOVIE_DETAILS = [
       "Kara Zor-El, aka Supergirl, joins forces with an unlikely companion on an interstellar journey of vengeance and justice when an unexpected adversary strikes too close to home.",
   },
   {
+    id:1368337,
     img: odyssey,
     date: "2026",
     name: "Interstellar",
@@ -57,9 +63,11 @@ const MOVIE_DETAILS = [
 ];
 
 function MainHero() {
+
+  const navigate = useNavigate();
   return (
     <Swiper
-      className="hero-swiper"
+      className=" hero-swiper"
       modules={[Autoplay, Pagination, EffectFade]}
       slidesPerView={1}
       loop
@@ -104,14 +112,9 @@ function MainHero() {
                   </p>
 
                   <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4">
-                    <button className="flex items-center justify-center gap-2 bg-primary px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold cursor-pointer">
+                    <button onClick={() => navigate(`/movie/${movie.id}`) } className="flex items-center justify-center gap-2 bg-primary px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold cursor-pointer">
                       <FaPlay />
                       Play Now
-                    </button>
-
-                    <button className="flex items-center justify-center gap-2 bg-white/10 px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold backdrop-blur cursor-pointer">
-                      <FaPlay />
-                      Watch Trailer
                     </button>
 
                     <button className="flex items-center justify-center gap-2 bg-white/10 px-6 py-3 rounded-tr-2xl rounded-bl-2xl font-semibold backdrop-blur cursor-pointer">

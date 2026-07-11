@@ -10,6 +10,8 @@ import { FcGoogle } from "react-icons/fc";
 
 import background from "../../../assets/img/bg-Sign up.png";
 import LOGIN_SCHEMA from "./LoginSchema";
+import mainLogo from "../../../assets/img/main logo.png"
+import mainImg from "../../../assets/img/login IMG.png"
 const initialValues = {
   email: "",
   password: "",
@@ -57,23 +59,21 @@ function Login() {
     <section className="relative h-screen w-screen overflow-hidden">
       {/* Background */}
       <img
-        src={background}
+        src={mainImg}
         alt="Background"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
 
       {/* Content */}
       <div className="relative z-10 grid h-full md:grid-cols-2">
         {/* Left */}
         <div className="flex flex-col items-center justify-center px-8 text-center text-white">
-          <h1 className="text-4xl font-bold md:text-6xl">
-            <span className="text-primary">M</span>eta Movie
-          </h1>
+        <img src={mainLogo} className="w-50 md:w-100" alt="" />
 
-          <p className="mt-5 max-w-md text-xl font-semibold md:text-3xl">
+          <p className="max-w-md text-xl font-semibold md:text-3xl">
             The World's Largest Movie Library
           </p>
         </div>
@@ -82,7 +82,7 @@ function Login() {
         <div className="flex items-center justify-center mt-4">
           <form
             onSubmit={handleLogin}
-            className="w-80 rounded-3xl border border-white/20 bg-white/10 p-4 backdrop-blur-xl mb-4"
+            className="w-80 rounded-3xl border border-white/20 bg-primary/40 p-4 backdrop-blur-xl mb-4"
           >
             {/* Tabs */}
             <div className="text-center">
