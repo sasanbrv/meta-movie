@@ -6,7 +6,7 @@ import HomePage from "../pages/Home/HomePage";
 import Login from './../pages/Login/loginpage/Login';
 import Signup from './../pages/Signup/Signup';
 import ForgotPass from "./../pages/Login/forgotpass/ForgotPass"
-import UpComing from "../pages/upComing/UpComing";
+import UpComing from "../pages/UpComing/UpComing";
 import MoviePlayer from "../pages/MoviePlayer/MoviePlayer";
 import GenrePage from './../pages/Genre/GenrePage';
 

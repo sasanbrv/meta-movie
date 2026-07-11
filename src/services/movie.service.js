@@ -18,8 +18,27 @@ export const movieService = {
         return data.results
     },
     getUpcoming: async () => {
-        const { data } = await api.get("/movie/upcoming");
-        return data.results
+        const today = new Date().toISOString().split("T")[0];
+        const nextYear = today.split("-");
+        nextYear[0] = String(Number(nextYear[0]) + 1);
+        const nextYearStr = nextYear.join("-");
+        console.log(today)
+  const requests = [1, 2, 3 , 4 , 5 ].map((page) =>
+    api.get("/discover/movie", {
+      params: {
+        page,
+        sort_by: "popularity.desc",
+        "primary_release_date.gte": today,
+        "primary_release_date.lte": nextYearStr,
+      },
+    })
+  );
+
+  const responses = await Promise.all(requests);
+
+  return {
+    results: responses.flatMap((res) => res.data.results),
+  };
     },
     getNowPlaying: async () => {
         const { data } = await api.get("/movie/now_playing");

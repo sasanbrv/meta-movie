@@ -14,10 +14,6 @@ const HomePage = () => {
       <div className="bg-black">
         <MainHero/>
         <MovieCarousel
-          fetchMovies={movieService.getUpcoming}
-          title={"Popular"}
-        />
-        <MovieCarousel
           fetchMovies={movieService.getNowPlaying}
           title={"Latest Released"}
         />
@@ -29,10 +25,6 @@ const HomePage = () => {
         <MovieCarousel
           fetchMovies={movieService.getTvPopular}
           title={"Popular Tv Shows"}
-        />
-        <MovieCarousel
-          fetchMovies={movieService.getUpcoming}
-          title={"Upcoming"}
         />
 
         <GenreSec />
