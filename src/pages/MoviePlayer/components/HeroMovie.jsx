@@ -80,7 +80,6 @@ function HeroMovie({ movie }) {
           </div>
         </div>
 
-        {/* Actions */}
       </div>
     </section>
   );
