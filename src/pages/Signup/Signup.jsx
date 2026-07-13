@@ -1,7 +1,8 @@
 import { useState } from "react";
-import background from "../../assets/img/bg-Sign up.png";
 import SIGNUP_SCHEMA from "./SignupSchema";
 import { NavLink } from "react-router-dom";
+import mainLogo from "../../assets/img/main logo.png"
+import mainImg from "../../assets/img/login IMG.png"
 const initialValues = {
   userName: "",
   email: "",
@@ -61,32 +62,30 @@ function Signup() {
     <section className="relative h-screen w-screen overflow-hidden">
       {/* Background */}
       <img
-        src={background}
+        src={mainImg}
         alt="Background"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
 
       {/* Content */}
       <div className="relative z-10 grid h-full md:grid-cols-2">
         {/* Left */}
         <div className="flex flex-col items-center justify-center px-8 text-center text-white">
-          <h1 className="text-4xl font-bold md:text-6xl">
-            <span className="text-primary">M</span>eta Movie
-          </h1>
+        <img src={mainLogo} className="w-50 md:w-100" alt="" />
 
-          <p className="mt-5 max-w-md text-xl font-semibold md:text-3xl">
+          <i className="max-w-md text-xl font-semibold font-serif md:text-3xl">
             The World's Largest Movie Library
-          </p>
+          </i>
         </div>
 
         {/* Right */}
         <div className="flex items-center justify-center mt-4">
           <form
             onSubmit={handleSubmit}
-            className="w-80 rounded-3xl border border-white/20 bg-white/10 p-4 backdrop-blur-xl mb-4"
+            className="w-80 rounded-3xl border border-white/10 bg-black/35 p-4 backdrop-blur-3xl shadow-[0_0_60px_rgba(115,0,255,0.25)]"
           >
             <div className="text-center">
               <div className="flex justify-center mt-8 text-2xl gap-8 font-light">

@@ -10,7 +10,7 @@ import UpComing from "../pages/upComing/UpComing";
 import MoviePlayer from "../pages/MoviePlayer/MoviePlayer";
 import GenrePage from './../pages/Genre/GenrePage';
 import Plans from "../pages/plans/components/Plans";
-
+import ContactUs from "../pages/contactUs/components/ContactUs"
 export const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -33,6 +33,10 @@ export const router = createBrowserRouter([
         path: "/plans",
         element: <Plans/>
 
+      },
+      {
+        path:"contactUs",
+        element:<ContactUs/>
       },
 
       { path: "genre/:id",

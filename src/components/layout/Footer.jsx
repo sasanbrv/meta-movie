@@ -8,17 +8,17 @@ const Footer = () => {
                 className="bg-cover bg-position-[0%_15%] relative w-full"
                 style={{backgroundImage: `url(${bgImg})`}}
             >
-                <div className="flex py-20 bg-purple-900/50 justify-center items-center">
+                <div className="flex py-20 bg-primary/30 justify-center items-center">
                     <div className="text-center px-4">
                         <h2 className='font-bold text-xl text-white'>
                             join now with your email address and choose your plan to get started
                         </h2>
                         <div className="flex mt-5 justify-center items-center gap-4 flex-wrap">
                             <input 
-                                className="pl-2 border text-white placeholder:text-white outline-none border-white rounded-sm w-64 py-2" 
+                                className="pl-2 border-2 text-white placeholder:text-white outline-none border-glass rounded-sm w-64 py-2 bg-white/30" 
                                 placeholder="email address"
                             />
-                            <button className='bg-purple-500 py-2 px-8 rounded-tr-2xl rounded-bl-2xl'>
+                            <button className='bg-primary py-2 px-8 rounded-tr-2xl rounded-bl-2xl text-white'>
                                 join now
                             </button>
                         </div>

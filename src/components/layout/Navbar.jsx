@@ -13,7 +13,7 @@ function Navbar() {
     { path: "/upcoming", label: "Upcoming" },
     { path: "/shows", label: "Shows" },
     { path: "/plans", label: "Plans" },
-    { path: "/community", label: "Community" },
+    { path: "/contactUs", label: "Contact Us" },
     { path: "/account", label: "Account" },
   ];
 
