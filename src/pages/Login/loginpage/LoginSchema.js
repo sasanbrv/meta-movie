@@ -1,13 +1,13 @@
 import * as z from "zod";
 
 const LOGIN_SCHEMA = z.object({
-  email: z.string().email("ایمیل وارد شده معتبر نیست"),
+  email: z.string().email("the Email is not valid!"),
 
   password: z
     .string()
-    .min(8, "رمز عبور باید حداقل ۸ کاراکتر باشد")
-    .max(128, "رمز عبور نمی‌تواند بیشتر از ۱۲۸ کاراکتر باشد")
-    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,"رمز عبور باید شامل حداقل یک حرف کوچک، یک حرف بزرگ و یک عدد باشد",),
+    .min(8, "the password must be more than 8 character!")
+    .max(128, "the password can not be more than 128 character!")
+    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/,"the password must contain uppercase and lowercase and number!",),
 });
 
 export default LOGIN_SCHEMA;

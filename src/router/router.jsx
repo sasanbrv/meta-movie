@@ -9,7 +9,8 @@ import ForgotPass from "./../pages/Login/forgotpass/ForgotPass"
 import UpComing from "../pages/UpComing/UpComing";
 import MoviePlayer from "../pages/MoviePlayer/MoviePlayer";
 import GenrePage from './../pages/Genre/GenrePage';
-
+import Plans from "../pages/plans/components/Plans";
+import ContactUs from "../pages/contactUs/components/ContactUs"
 export const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -28,9 +29,21 @@ export const router = createBrowserRouter([
         element: <MoviePlayer />,
       },
       {
-        path: "genre/:id",
-        element: <GenrePage />,
+
+        path: "/plans",
+        element: <Plans/>
+
       },
+      {
+        path:"contactUs",
+        element:<ContactUs/>
+      },
+
+      { path: "genre/:id",
+        element: <GenrePage />
+      },
+      
+
     ],
   },
 
