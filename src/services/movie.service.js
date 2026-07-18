@@ -71,4 +71,12 @@ export const movieService = {
         return data
     },
     
+    searchMovie: async (query) => {
+        const {data} = await api.get("/search/movie", {
+            params: {
+                query ,
+            },
+        }) ; 
+        return data
+    }
 }

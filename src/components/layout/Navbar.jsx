@@ -1,20 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
 import mainLogo from "../../assets/img/main logo.png";
+import SearchBtn from "../movie/SearchBtn";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
 
+  
   const navItems = [
     { path: "/", label: "Home", end: true },
     { path: "/upcoming", label: "Upcoming" },
     { path: "/shows", label: "Shows" },
     { path: "/plans", label: "Plans" },
     { path: "/contactUs", label: "Contact Us" },
-    { path: "/account", label: "Account" },
+    { path: "/login", label: "Account" },
   ];
 
   useEffect(() => {
@@ -30,10 +32,10 @@ function Navbar() {
   return (
     <>
       <header
-        className={`md:fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        className={`lg:fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-black md:bg-[#0B0B0B]/40 backdrop-blur-md shadow-lg"
-            : "bg-black md:bg-transparent"
+            ? "bg-black lg:bg-[#0B0B0B]/40 backdrop-blur-md shadow-lg"
+            : "bg-black lg:bg-transparent"
         }`}
       >
         <div className="container mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -41,14 +43,14 @@ function Navbar() {
             <img src={mainLogo} className="w-40 h-auto" alt="" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-4 lg:gap-6 md:gap-8">
+          <nav className="hidden lg:flex items-center gap-4 lg:gap-8">
             {navItems.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 end={item.end}
                 className={({ isActive }) =>
-                  `text-base md:text-lg  transition ${
+                  `text-base whitespace-nowrap lg:text-lg   transition ${
                     isActive
                       ? "text-primary font-bold"
                       : " text-white  hover:text-primary"
@@ -59,12 +61,12 @@ function Navbar() {
               </NavLink>
             ))}
 
-            <FaSearch className="text-xl md:text-2xl text-white cursor-pointer hover:text-primary transition" />
+            <SearchBtn />
           </nav>
 
           <button
             onClick={() => setIsOpen(true)}
-            className="md:hidden text-white text-3xl"
+            className="lg:hidden text-white text-3xl"
           >
             <HiMenu />
           </button>

@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
         element: <GenrePage />
       },
       
-
+    
     ],
   },
 

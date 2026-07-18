@@ -14,7 +14,7 @@ const MainLayout=() => {
       <Navbar />
       
       <main className=" bg-black flex-1">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4">
          <Outlet />  
         </div>
       </main>
