@@ -49,7 +49,6 @@ const UpComing = () => {
         );
     }
 
-    // ❌ اگر فیلم وجود نداشت
     if (!movies) {
         return (
             <div className="min-h-125 flex items-center justify-center text-white">
