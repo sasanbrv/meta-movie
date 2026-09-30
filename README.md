@@ -1,6 +1,6 @@
 # 🎬 Meta Movie
 
-# Demo : 
+# Demo :  You need to connect to the project using a VPN because the service providing the API (TMDB) is blocked in Iran.
 https://meta-movie-b55o.vercel.app/
 
 **Meta Movie** is a modern movie discovery web application that helps you find movies, explore their information, and watch their trailers in one place.
