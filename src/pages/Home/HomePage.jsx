@@ -4,7 +4,7 @@ import { movieService } from "../../services/movie.service";
 import MainHero from "./components/MainHero";
 import MostWatched from "./components/MostWatched";
 
-import GenreSec from "./components/genreSec";
+import GenreSec from "./components/GenreSec";
 import FAQ from "./components/FAQ";
 
 const HomePage = () => {
