@@ -1,5 +1,8 @@
 # 🎬 Meta Movie
 
+# Demo : 
+https://meta-movie-b55o.vercel.app/
+
 **Meta Movie** is a modern movie discovery web application that helps you find movies, explore their information, and watch their trailers in one place.
 
 Built with **React** and **Vite**, the project provides a simple and responsive interface for discovering movies through a REST API.
